@@ -1,0 +1,13 @@
+name: check
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Syntax
+        run: |
+          for f in bin/* tools/*.sh; do bash -n "$f"; done
+          python3 -m py_compile bench/*.py
