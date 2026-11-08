@@ -1,5 +1,11 @@
 # moe-cache-benchmark
 
+> **This tool is superseded and no longer maintained.** Benchmarking now lives in moe-cache itself: run
+> `python3 bin/moe_cache.py bench-report MODEL.gguf`, or press **Share my numbers** on the moe-cache control page. It starts both arms
+> (stock llama.cpp and moe-cache) through the same launcher plan, works on Windows and Linux; from v0.3.8 it can also run a real multi-turn conversation.
+> Numbers from this repository used an 8k context with short prompts; do not compare them with moe-cache's current results.
+> See [moe-cache](https://github.com/IbrahimSiddiqui007/moe-cache).
+
 Benchmarks for [moe-cache](https://github.com/IbrahimSiddiqui007/moe-cache): stock llama.cpp against llama.cpp with the moe-cache plugin, on **your** machine,
 with **your** model and prompts, under a memory limit you choose, with a check that both produce the same tokens.
 Split out of the moe-cache repository on 2026-10-14 (from moe-cache commit `b59288f`).
